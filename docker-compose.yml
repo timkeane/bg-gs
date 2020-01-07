@@ -22,7 +22,6 @@ services:
     image: kartoza/geoserver:2.15.2
     volumes:
       - geoserver-vol:/opt/geoserver/data_dir
-      - ./init/geoserver:/scripts/init
     ports:
       - "8080:8080"
     restart: on-failure
