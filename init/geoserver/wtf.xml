@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<wfs:Transaction service="WFS" version="1.1.0"
+    xmlns:wfs="http://www.opengis.net/wfs"
+    xmlns:gml="http://www.opengis.net/gml">
+    <wfs:Insert>
+        <parade>
+            <id>0</id>
+            <the_geom>
+                <gml:MultiLineString srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+                    <gml:lineStringMember>
+                        <gml:LineString>
+                            <gml:coordinates decimal="." cs="," ts=" ">
+                                -73.9799352452722,40.754782657239 -73.963727684901,40.7770056108705
+                            </gml:coordinates>
+                        </gml:LineString>
+                    </gml:lineStringMember>
+                </gml:MultiLineString>
+            </the_geom>
+            <name>Saint Patricks Day Parade</name>
+        </parade>
+    </wfs:Insert>
+</wfs:Transaction>

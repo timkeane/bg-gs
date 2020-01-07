@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<wfs:Transaction service="WFS" version="1.0.0"
+  xmlns:wfs="http://www.opengis.net/wfs"
+  xmlns:basicgov="https://basicgov.com"
+  xmlns:gml="http://www.opengis.net/gml"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.0.0/WFS-transaction.xsd http://www.openplans.org/basicgov http://localhost:8080/geoserver/wfs/DescribeFeatureType?typename=basicgov:basicgov_roads">
+  <wfs:Insert>
+    <basicgov:parade>
+      <basicgov:the_geom>
+        <gml:MultiLineString srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+          <gml:lineStringMember>
+            <gml:LineString>
+              <gml:coordinates decimal="." cs="," ts=" ">
+                  -73.9799352452722 40.754782657239 -73.963727684901 40.7770056108705
+              </gml:coordinates>
+            </gml:LineString>
+          </gml:lineStringMember>
+        </gml:MultiLineString>
+      </basicgov:the_geom>
+      <basicgov:name>Saint Patrick's Day Parade</basicgov:name>
+    </basicgov:parade>
+  </wfs:Insert>
+</wfs:Transaction>

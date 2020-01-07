@@ -1,0 +1,38 @@
+version: '2.1'
+
+volumes:
+  postgis-vol:
+  geoserver-vol:
+
+services:
+  postgis:
+    image: kartoza/postgis:11.0-2.5
+    volumes:
+        - postgis-vol:/var/lib/postgresql
+        - ./init/postgis/parade.sql:/docker-entrypoint-initdb.d/parade.sql
+    ports:
+      - "5432:5432"
+    env_file:
+    - docker-env/db.env
+    restart: on-failure
+    healthcheck:
+      test: "exit 0"
+
+  geoserver:
+    image: kartoza/geoserver:2.15.2
+    volumes:
+      - geoserver-vol:/opt/geoserver/data_dir
+      - ./init/geoserver:/scripts/init
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    env_file:
+      - docker-env/geoserver.env
+    depends_on:
+      postgis:
+        condition: service_healthy
+    healthcheck:
+      test: curl --fail -s http://localhost:8080/ || exit 1
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
