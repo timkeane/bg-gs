@@ -8,6 +8,8 @@ A docker-compose project to run PostGIS and GeoServer for use by BasicGov for te
 
 ## Usage
 * Execute `./run.sh` from the project root
+* Everything is ready to go when you see
+   * `============== GeoServer is configured! ==============`
 
 ## GeoServer
 * Admin Console
