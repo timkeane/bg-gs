@@ -22,7 +22,7 @@ do
 
   if [ $STATUS -eq 200 ]; then
     echo ''
-    echo "... Configuring GeoServer ..."
+    echo '============== Configuring GeoServer... =============='
     echo ''
 
     curl -X POST -H "$HDR" -d @$DIR/namespace.json $REST/namespaces.json
@@ -36,12 +36,12 @@ do
 
     echo ''
     echo '============== GeoServer is configured! =============='
-    
+    echo ''
 
     break
   else
     echo ''
-    echo '... Waiting for GeoServer ...'
+    echo '============== Waiting for GeoServer... =============='
   fi
   sleep 5
 done
