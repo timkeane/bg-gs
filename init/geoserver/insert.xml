@@ -12,7 +12,7 @@
           <gml:lineStringMember>
             <gml:LineString>
               <gml:coordinates decimal="." cs="," ts=" ">
-                  -73.9799352452722 40.754782657239 -73.963727684901 40.7770056108705
+                  -73.9799352452722,40.754782657239 -73.963727684901,40.7770056108705
               </gml:coordinates>
             </gml:LineString>
           </gml:lineStringMember>
