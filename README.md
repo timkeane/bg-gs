@@ -8,6 +8,11 @@ A docker-compose project to run PostGIS and GeoServer for use by BasicGov for te
 
 ## Usage
 * Execute `./run.sh` from the project root
+  * Creates an empty `parade` table in PostGIS `gis` database
+  * Creates a `basicgov` namespace in GeoServer
+  * Creates a `postgis` datastore in GeoServer
+  * Creates a `parade` layer in GeoServer
+  * Uses WFS-T to add The Saint Patrick's Day Parade to the `parade` layer
 * Everything is ready to go when you see
    * `============== GeoServer is configured! ==============`
 
