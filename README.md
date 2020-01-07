@@ -8,6 +8,7 @@ A docker-compose project to run PostGIS and GeoServer for use by BasicGov for te
 
 ## Usage
 * Execute `./run.sh` from the project root
+  * Runs `docker-compose up` (see `docker-compose.yml`)
   * Creates an empty `parade` table in PostGIS `gis` database
   * Creates a `basicgov` namespace in GeoServer
   * Creates a `postgis` datastore in GeoServer
