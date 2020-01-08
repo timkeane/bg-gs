@@ -4,6 +4,7 @@ A docker-compose project to run PostGIS and GeoServer for use by BasicGov for te
 
 ## Prerequisites
 * bash shell
+* curl
 * Docker
 
 ## Usage
